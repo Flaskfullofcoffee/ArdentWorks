@@ -10,13 +10,24 @@ const IndexPage = () => {
       <div className={indexStyles.map}></div>
       <header>
         <div className={indexStyles.logo}></div>
-        <h1 className={indexStyles.title}>A bespoke web design<br />& development house.</h1>
+        <h2 className={indexStyles.title}>A bespoke web design<br />& development house.</h2>
         <div className={indexStyles.btnBox}>
           <button className={indexStyles.aboutBtn}>About Us</button>
           <button className={indexStyles.servicesBtn}>Services</button>
         </div>
       </header>
-
+      <div className={indexStyles.projectWrapper}>
+        <div className={indexStyles.projectContent}>
+          <div className={indexStyles.project}></div>
+        </div>
+        <div className={indexStyles.projectInfo}>
+          <h2 className={indexStyles.title}>TEST</h2>
+          <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+          <button className={indexStyles.designBtn}>Design</button>
+          <button className={indexStyles.devBtn}>Development</button>
+        </div>
+      </div>
+      <button className={indexStyles.contactBtn} btn>Contact Us</button>
     </div>
   )
 }

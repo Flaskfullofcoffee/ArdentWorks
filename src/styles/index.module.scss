@@ -30,6 +30,7 @@ button {
     width: 100%;
     top: 2.5vh;
     opacity: .75;
+    z-index: 5;
   }
   .background {
     background-image: url('../images/cityscape.png');
@@ -39,6 +40,7 @@ button {
     width: 100%;
     position: absolute;
     top: -35vh;
+    z-index: 4;
   }
   header {
     display: flex;
@@ -47,53 +49,89 @@ button {
     height: 45vh;
     width: 100%;
     top: 0;
-    // background: tomato;
+    z-index: 5;
     overflow: hidden;
-  }
-  .logo {
-    background-image: url('../images/AWLogo.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: relative;
-    top: 5vh;
-    left: 7vw;
-    height: 10vh;
-    width: 55%;
-  }
-  .title {
-    position: absolute;
-    top: 15vh;
-    left: 7.25vw;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    font-size: 2.5rem;
-    color: #000;
-  }
-  .btnBox {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    top: 23vh;
-    left: 7.5vw;
-    .aboutBtn, .servicesBtn {
-      border: 2px solid #000;
-      border-radius: .25vw;
-      padding: 1vh 1.5vw;
-      background: #000;
-      color: #fff;
+    .logo {
+      background-image: url('../images/AWLogo.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: relative;
+      top: 5vh;
+      left: 7vw;
+      height: 10vh;
+      width: 55%;
+    }
+    .title {
+      position: absolute;
+      top: 15vh;
+      left: 7.25vw;
       font-family: 'Montserrat', sans-serif;
-      font-weight: 400;
-      font-size: 1.5rem;
-      &:hover {
-        background: #fff;
-        color: #000;
+      font-weight: 300;
+      font-size: 2.5rem;
+      color: #000;
+    }
+    .btnBox {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      top: 23vh;
+      left: 7.5vw;
+      .aboutBtn, .servicesBtn {
+        border: 2px solid #000;
+        border-radius: .25vw;
+        padding: 1vh 1.5vw;
+        background: #000;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 1.5rem;
+        &:hover {
+          background: #fff;
+          color: #000;
+        }
+      }
+      .aboutBtn {
+        margin-right: 2.5vw
+      }
+      .servicesBtn {
+        margin-left: 2.5vw
       }
     }
-    .aboutBtn {
-      margin-right: 2.5vw
+  }
+  .projectWrapper {
+    position: absolute;
+    top: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 6;
+    width: 100%;
+    .projectContent, .projectInfo {
+      height: 50vh;
     }
-    .servicesBtn {
-      margin-left: 2.5vw
+    .projectContent {
+      width: 40%;
+      border: 2px solid #000;
+      border-radius: .75vw;
+      background: #fff;
+      position: relative;
+      left: -3.5vw;
+      z-index: 5;
+      .project {
+        position: relative;
+        border-radius: .75vw;
+        height: 90%;
+        width: 95%;
+        top: 5%;
+        background: tomato;
+        z-index: 6;
+      }
+    }
+    .projectInfo {
+      background: aquamarine;
+      position: relative;
+      right: 15vw;
+      width: 32%;
     }
   }
 }
