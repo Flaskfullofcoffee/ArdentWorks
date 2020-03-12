@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'alteroregular';
+    src: url('altero-regular-webfont.woff2') format('woff2'),
+         url('altero-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,99 @@
+/* Global styles */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  font-size: 100%;
+  font-family: 'Maven Pro', sans-serif;
+  border: 0;
+  padding: 0;
+  background: none;
+}
+
+// body {}
+
+
+.contentWrapper {
+  // background: tomato;
+  height: 300vh;
+  width: 100%;
+  .map {
+    background-image: url('../images/AW_topographic.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 225vh;
+    width: 100%;
+    top: 2.5vh;
+    opacity: .75;
+  }
+  .background {
+    background-image: url('../images/cityscape.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 350vh;
+    width: 100%;
+    position: absolute;
+    top: -35vh;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 45vh;
+    width: 100%;
+    top: 0;
+    // background: tomato;
+    overflow: hidden;
+  }
+  .logo {
+    background-image: url('../images/AWLogo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 5vh;
+    left: 7vw;
+    height: 10vh;
+    width: 55%;
+  }
+  .title {
+    position: absolute;
+    top: 15vh;
+    left: 7.25vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 2.5rem;
+    color: #000;
+  }
+  .btnBox {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 23vh;
+    left: 7.5vw;
+    .aboutBtn, .servicesBtn {
+      border: 2px solid #000;
+      border-radius: .25vw;
+      padding: 1vh 1.5vw;
+      background: #000;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 1.5rem;
+      &:hover {
+        background: #fff;
+        color: #000;
+      }
+    }
+    .aboutBtn {
+      margin-right: 2.5vw
+    }
+    .servicesBtn {
+      margin-left: 2.5vw
+    }
+  }
+}
