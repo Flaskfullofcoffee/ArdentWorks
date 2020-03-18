@@ -11,7 +11,7 @@ const IndexPage = () => {
       <header>
         <div className={indexStyles.logo}></div>
         <h2 className={indexStyles.title}>A bespoke web design<br />& development house.</h2>
-        <div className={indexStyles.btnBox}>
+        <div className={indexStyles.btnBox1}>
           <button className={indexStyles.aboutBtn}>About Us</button>
           <button className={indexStyles.servicesBtn}>Services</button>
         </div>
@@ -22,32 +22,34 @@ const IndexPage = () => {
         </div>
         <div className={indexStyles.projectInfo}>
           <h2 className={indexStyles.title}>TEST</h2>
-          <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-          <button className={indexStyles.designBtn}>Design</button>
-          <button className={indexStyles.devBtn}>Development</button>
+          <p className={indexStyles.info}>–––– lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+          <div className={indexStyles.btnBox2}>
+            <button className={indexStyles.designBtn}>Design</button>
+            <button className={indexStyles.devBtn}>Development</button>
+          </div>
         </div>
       </div>
       <button className={indexStyles.contactBtn} btn>Contact Us</button>
+      <div className={indexStyles.formWrapper}>
+        <div className={indexStyles.formBackground}></div>
+        <form className={indexStyles.form} name="contactForm" action="" id="contactMe" method="POST">
+          <div className={indexStyles.who}>
+            <input className={indexStyles.user_input} type="text" id="firstName" name="user_name" placeholder="First name" required />
+            <input className={indexStyles.user_input} type="text" id="lastName" name="user_name" placeholder="Last name" required />
+          </div>
+          <div className={indexStyles.email}>
+            <input type="email" className={indexStyles.user_input} id={indexStyles.email} name="user_email" placeholder="example@email.com" required />
+          </div>
+          <div className={indexStyles.message}>
+            <textarea name="comments" id="comments" cols="30" rows="10" className={indexStyles.input_field} placeholder="What's your project?"></textarea>
+          </div>
+          <div className={indexStyles.btnField}>
+            <button id="submit" type="submit" className={indexStyles.submitBtn}>Submit</button>
+          </div>
+        </form> 
+      </div>
     </div>
   )
 }
 
 export default IndexPage
-
-
-{/* <h1>A bespoke web design<br />& development house.</h1>
-<button className={indexStyles.aboutBtn}>About Us</button>
-<button className={indexStyles.servicesBtn}>Services</button>
-<div className={indexStyles.servicesWrapper}>
-  <div className={indexStyles.serviceContent}>
-    <h1></h1>
-    <p></p>
-    <button className={indexStyles.designBtn}>Design</button>
-    <button className={indexStyles.devBtn}>Development</button>
-  </div>
-  <div className={indexStyles.serviceInfo}>
-
-  </div>
-</div>
-<button className={indexStyles.contactBtn} btn>Contact Us</button>
-<form></form> */}
