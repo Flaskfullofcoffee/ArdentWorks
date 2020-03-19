@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import Footer from '../components/footer'
 import indexStyles from '../styles/index.module.scss'
 
 const IndexPage = () => {
@@ -31,7 +32,6 @@ const IndexPage = () => {
       </div>
       <button className={indexStyles.contactBtn} btn>Contact Us</button>
       <div className={indexStyles.formWrapper}>
-        <div className={indexStyles.formBackground}></div>
         <form className={indexStyles.form} name="contactForm" action="" id="contactMe" method="POST">
           <div className={indexStyles.who}>
             <input className={indexStyles.user_input} type="text" id="firstName" name="user_name" placeholder="First name" required />
@@ -46,8 +46,12 @@ const IndexPage = () => {
           <div className={indexStyles.btnField}>
             <button id="submit" type="submit" className={indexStyles.submitBtn}>Submit</button>
           </div>
-        </form> 
+        </form>
       </div>
+      <footer className={indexStyles.footerWrap}>
+        <p>Created by ArdentWorks LLC © 2020</p>
+      </footer>
+      {/* <Footer /> */}
     </div>
   )
 }

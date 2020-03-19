@@ -14,20 +14,21 @@ button {
   background: none;
 }
 
-// input {
-//   border: none;
-//   border-radius: .25vw;
-//   background-image: none;
-//   -webkit-box-shadow: none;
-//   -moz-box-shadow: none;
-//   box-shadow: none;
-// }
+input, textarea {
+  border: none;
+  border-radius: .25vw;
+  background-image: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  max-width: 100%;
+}
 
 // body {}
 
 
 .contentWrapper {
-  height: 300vh;
+  height: 320vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -180,6 +181,7 @@ button {
     }
   }
   .contactBtn {
+    display: none;
     position: relative;
     top: -5vh;
     width: 15vw;
@@ -200,110 +202,114 @@ button {
     }
   }
   .formWrapper {
-    position: relative;
+    // display: none;
+    position: absolute;
+    left: 50%;
     height: 75vh;
     width: 80%;
     z-index: 5;
-    margin: 0 auto;
-    // mix-blend-mode: multiply;
-    .formBackground {
-      position: relative;
-      height: 100%;
-      width: 100%;
-      background: dimgrey;
-      border-radius: .5vw;
-    }
+    margin-left: -40%;
+    top: 235vh;
+    border: 2px solid #fff;
+    border-radius: .75vw;
     .form {
-      position: relative;
-      top: -63vh;
+      position: absolute;
+      top: 12vh;
       z-index: 6;
       height: 55vh;
       width: 100%;
-      background: red;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      margin-bottom: -55vh;
+      .who, .email, .message {}
+      .who, .email {}
+      .who {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 90%;
+        top: -7vh;
+        .user_input {
+          width: 30vw;
+          padding: .5vh;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 400;
+          font-size: 1.25rem;
+        }
+        & > :first-child {
+          margin-right: 2.5vw;
+        }
+        & > :last-child {
+          margin-left: 2.5vw;
+        }
+      }
+      .email {
+        position: relative;
+        top: -1vh;
+        width: 83%;
+        .user_input {
+          width: 66vw;
+          padding: .5vh;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 400;
+          font-size: 1.25rem;
+        }
+      }
+      .message {
+        position: relative;
+        top: 5vh;
+        width: 83%;
+        .input_field {
+          width: 66vw;
+          padding: .5vh;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 400;
+          font-size: 1.25rem;
+        }
+      }
+      .btnField {
+        .submitBtn {
+          position: relative;
+          top: 4vh;
+          width: 15vw;
+          align-self: center;
+          z-index: 6;
+          border: 2px solid #fff;
+          border-radius: .25vw;
+          padding: 1vh 1.5vw;
+          background: #fff;
+          color: #000;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 400;
+          font-size: 1.5rem;
+          margin-top: 5vh;
+          &:hover {
+            background: #000;
+            color: #fff;
+          }
+        }
+      }
     }
   }
-
-
-
-
-
-
-
-
-
-
-  // .formWrapper {
-  //   position: relative;
-  //   top: 2vh;
-  //   height: 60vh;
-  //   width: 80vw;
-  //   background: teal;
-    // .formBackground {
-    //   position: relative;
-    //   z-index: 4;
-    //   height: 60vh;
-    //   width: 80vw;
-    //   margin: 0 auto;
-    //   background: dimgrey;
-    //   mix-blend-mode: multiply;
-    //   border-radius: .25vw;
-    //   opacity: .75;
-    //   filter: blur(.25px);
-    // }
-  //   .form {
-  //     position: relative;
-  //     top: -55vh;
-  //     height: 50vh;
-  //     width: 80%;
-  //     margin: 0 auto;
-  //     z-index: 6;
-  //     display: flex;
-  //     flex-direction: column;
-  //     justify-content: center;
-  //     align-items: center;
-  //     .who, .email, .message {
-  //       position: relative;
-  //       display: flex;
-  //       flex-direction: row;
-  //       height: 6vh;
-  //       width: 90%;
-  //       border: none;
-  //     }
-  //     .who, .email {
-  //       justify-content: center;
-  //     }
-  //     .who {
-  //       top: -5vh
-  //     }
-  //     // .who {
-  //     //   top: -8vh;
-  //     //   #firstName {
-  //     //     margin-right: 2.5vw;
-  //     //   }
-  //     //   #lastName {
-  //     //     margin-left: 2.5vw;
-  //     //   }
-  //     //   .user_input {
-  //     //     color: red;
-  //     //     width: 30vw;
-  //     //   }
-  //     // }
-  //     // .email {
-  //     //   top: -5vh;
-  //     //   .user_input {
-  //     //     width: 90%;
-  //     //   }
-  //     // }
-  //     // .message {
-  //     //   top: 4vh;
-  //     //   .input_field {
-  //     //     color: red;
-  //     //   }
-  //     // }
-  //   }
-  // }
+  .footerWrap {
+    position: absolute;
+    z-index: 8;
+    top: 315vh;
+    height: 5vh;
+    width: 100%;
+    background: #323232;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    p {
+      align-self: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 1.25rem;
+      color: #fff;
+    }
+  }
 }

@@ -5,6 +5,9 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: 'ArdentWorks'
+  },
   plugins: [
     `gatsby-plugin-sass`,
     {

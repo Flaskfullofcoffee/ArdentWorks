@@ -1,0 +1,97 @@
+/* Global styles */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  font-size: 100%;
+  font-family: 'Maven Pro', sans-serif;
+  border: 0;
+  padding: 0;
+  background: none;
+}
+
+input, textarea {
+  border: none;
+  border-radius: .25vw;
+  background-image: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  max-width: 100%;
+}
+
+
+.projectWrapper {
+  position: absolute;
+  top: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 6;
+  width: 100%;
+  .projectContent, .projectInfo {
+    height: 50vh;
+  }
+  .projectContent {
+    width: 40%;
+    border: 2px solid #000;
+    border-radius: .75vw;
+    background: #fff;
+    position: relative;
+    left: -3.5vw;
+    z-index: 5;
+    .project {
+      position: relative;
+      border-radius: .75vw;
+      height: 90%;
+      width: 95%;
+      top: 5%;
+      background: tomato;
+      z-index: 6;
+    }
+  }
+  .projectInfo {
+    // background: teal;
+    position: relative;
+    right: 17vw;
+    width: 32%;
+    top: 8vh;
+    .title {
+      font-family: 'altero', serif;
+      font-size: 2.5rem;
+      text-transform: lowercase;
+    }
+    .info {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      margin-top: 2.5vh;
+    }
+    .btnBox2 {
+      .designBtn, .devBtn {
+        border: 2px solid #000;
+        border-radius: .25vw;
+        padding: 1vh 1.5vw;
+        background: #000;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 1.5rem;
+        margin-top: 5vh;
+        &:hover {
+          background: #fff;
+          color: #000;
+        }
+      }
+      .designBtn {
+        margin-right: 2.5vw;
+      }
+      .devBtn {
+        margin-left: 2.5vw;
+      }
+    }
+  }
+}
