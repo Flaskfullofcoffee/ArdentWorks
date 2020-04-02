@@ -4,15 +4,20 @@ import Footer from '../components/footer'
 import blogStyles from '../styles/blog.module.scss'
 
 const BlogPage = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-    `)
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //       allContentfulProject ( sort: { fields: publishedDate, order: DESC  }
+  //       ) {
+  //         edges {
+  //           node {
+  //             title
+  //             publishedDate (formatString:"MMMM Do YYYY")
+  //           }
+  //         }
+  //       }
+  //     }
+  //   `)
+  let title = 'Jo King & Co'
 
   return (
     <div className={blogStyles.projectWrapper}>
@@ -20,7 +25,7 @@ const BlogPage = () => {
         <div className={blogStyles.project}></div>
       </div>
       <div className={blogStyles.projectInfo}>
-        <h2 className={blogStyles.title}>{data.site.siteMetadata.title}</h2>
+        <h2 className={blogStyles.title}>Jo King & Co</h2>
         <p className={blogStyles.info}>–––– lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
         <div className={blogStyles.btnBox2}>
           <button className={blogStyles.designBtn}>Design</button>
